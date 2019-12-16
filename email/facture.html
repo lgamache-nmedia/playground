@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Commande</title>
+
+  <style type="text/css">
+html {
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+	color:#252829;
+	font-size: 16px;
+	line-height:22px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	margin: 0;
+	background-color: #f4f4f4;
+	padding: 0;
+	font-size: 16px;
+	color:#252829;
+	line-height:22px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+img{
+	border:0;
+}
+table td {border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
+
+.cell1{
+	background-color: #f4f4f4;
+}
+.cell2 {text-align:left!important; text-align:left;}
+.cell3{
+	background:#fff;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#252829;
+	font-size: 16px;
+	line-height:22px;
+	padding:22px 28px 32px 28px;
+}
+	.cell3 p{
+		margin:10px 0;
+	}
+	
+	.cell3 h1{
+		color:#252829;
+		margin:0 0 20px 0;
+		font-size:34px;
+		line-height:40px;
+		text-transform:uppercase;
+		font-weight:bold;
+	}
+.cell4{
+	background:#292929;
+	padding:32px 28px;
+}
+	.cell5{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:12px;
+		line-height:20px;
+		color:#fff;
+	}
+		.cell5 strong{
+			text-transform:uppercase;
+			font-size:14px;
+		}
+	.cell6, .cell6 td{
+		font-family: Arial, Helvetica, sans-serif;
+		color:#fff;
+		font-size:12px;
+	}
+.cell6 td.cell9, .cell6 td{color:#444444;}
+.cell6 td.cell8{color:#fff;padding-top:2px;}
+		.cell6 a{
+			text-decoration:underline;
+			color:#fff;
+		}
+		.cell6 .top{
+			color:#444444;white-space:nowrap;
+		}
+	.cell7{
+		text-align:right;white-space:nowrap;
+	}
+
+
+.titre2 {font-family: Arial !important;  font-family: Arial; color: #636466 !important; color: #636466; font-size: 24px !important; font-size: 24px; line-height:40px!important; line-height:40px; font-weight:700!important; font-weight:700;}
+
+.titre3 {font-family: Arial !important;  font-family: Arial; color: #000000 !important; color: #000000; font-size: 16px !important; font-size: 16px; line-height:24px!important; line-height:24px; font-weight:700!important; font-weight:700;}
+
+.texte {font-family: Arial !important;  font-family: Arial; color: #636466 !important; color: #636466; font-size: 14px !important; font-size: 14px; line-height:18px!important; line-height:18px;}
+
+.anomalie{font-family: Arial !important;  font-family: Arial; color: #636466 !important; color: #636466; font-size: 14px !important; font-size: 14px; line-height:18px!important; line-height:18px;}
+
+.anomalie a {color:#000!important; color:#000;}
+
+.numero {font-family: Arial !important;  font-family: Arial; color: #636466 !important; color: #636466; font-size: 14px !important; font-size: 14px; line-height:18px!important; line-height:18px;}
+
+.space1 {height:15px !important;
+      height: 15px;
+      line-height: 15px !important;
+      line-height: 15px;
+      font-size: 15px !important;
+      font-size: 15px;}
+
+
+.adresse {font-family: Arial !important;  font-family: Arial; color: #636466 !important; color: #636466; font-size: 14px !important; font-size: 14px; line-height:20px!important; line-height:20px;}
+
+.listProduct table {width:100%;}
+.listProduct table th p, .listProduct table td p {line-height:normal!important; line-height:normal;}
+.listProduct th {font-family: Arial !important; font-family: Arial; color:#000!important; color:#000; font-weight:bold; font-size: 14px !important; font-size:14px;}
+.listProduct th span {color:#000!important; color:#000;}
+
+.OrderProductListTable {border-collapse:collapse;}
+.OrderProductListTable th, .OrderProductListTable td {border:1px #ececec solid;}
+
+.OrderProductListSkuCell {}
+.OrderProductListNameCell {text-align:left;}
+.OrderProductListDescriptionCell {text-align:left;}
+.OrderProductListQuantityCell {width:50px;}
+.OrderProductListPriceWithoutDiscountCell {width:160px;}
+.OrderProductListDiscountCell {}
+.OrderProductListPriceCell {width:85px;} 
+.OrderProductListTotalPriceCell {width:65px;}
+
+.OrderProductListNameCell,
+.OrderProductListQuantityCell,
+.OrderProductListPriceCell,
+.OrderProductListTotalPriceCell,
+.OrderProductListSubTotalTitleCell,
+.OrderProductListSubTotalCell,
+.OrderProductListTaxesTitleCell,
+.OrderProductListTaxesCell,
+.OrderProductListShippingTitleCell,
+.OrderProductListShippingCell,
+.OrderProductListTotalTitleCell,
+.OrderProductListTotalCell,
+.OrderProductListPriceWithoutDiscountCell,
+.OrderProductListDiscountCell,
+.OrderProductListDescriptionCell,
+.OrderProductListPromoCodeTitleCell,
+.OrderProductListPromoCodeCell {padding:5px; font-family: Arial !important; font-family: Arial; color: #6b6b6b !important; color: #6b6b6b; line-height:1.5em; font-size: 12px !important; font-size: 12px;}
+
+.OrderProductListQuantityCell, 
+.OrderProductListPriceCell, 
+.OrderProductListTotalPriceCell,
+.OrderProductListSubTotalCell,
+.OrderProductListTaxesCell,
+.OrderProductListShippingCell,
+.OrderProductListTotalCell,
+.OrderProductListSubTotalTitleCell,
+.OrderProductListTaxesTitleCell,
+.OrderProductListShippingTitleCell,
+.OrderProductListTotalTitleCell,
+.OrderProductListDiscountCell,
+.OrderProductListPriceWithoutDiscountCell,
+.OrderProductListPromoCodeTitleCell,
+.OrderProductListPromoCodeCell {text-align:right;}
+
+.tax {font-family: Arial !important; font-family: Arial; text-align: center; font-size: 12px !important; font-size: 12px; color: rgb(120, 120, 120) !important; color: rgb(120, 120, 120); height:50px;}
+
+</style>
+</head>
+<body>
+  <form>
+    <div class="nodisplay">Message du Pré-Header</div>
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td align="center" class="cell1" valign="middle">
+            <table width="650" align="center" cellspacing="0" cellpadding="0" valign="top">
+              <tbody>
+                <tr>
+                  <td align="center" class="cell2" valign="top">
+                    <a href="#"><img src="banner650x325.png" /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" class="cell3" valign="top">
+                    <h1>Résumé de transaction/Transaction summary</h1>
+                    <table style="width: 100%;" cellspacing="0" cellpadding="0" mappingtype="Template">
+                      <tbody>
+                        <tr><td class="titre3">Merci d’avoir fait un achat chez XXXXX / Thank you for shopping with XXXXX.</td></tr>
+                        <tr><td colspan="1" class="space">&nbsp;</td></tr>
+                        <tr>
+                          <td colspan="1">
+                            <p class="numero">
+                              Nom de l'acheteur&nbsp;(Adresse courriel de l'acheteur)<br />
+                              Numéro de téléphone du payeur<br /><br />
+                              Numéro de commande/Order number: Numéro de la commande<br />
+                              Numéro de paiement/Payment number: Numéro de paiement<br />
+                              Date de création de la commande
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="1" class="space">&nbsp;&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td colspan="1" class="titre2">Détails de la transaction/Transaction details</td>
+                        </tr>
+                        <tr>
+                          <td colspan="1" class="titre3">Adresse de facturation/Billing address</td>
+                        </tr>
+                        <tr>
+                          <td class="adresse">
+                            Adresse de livraison<br />
+                            Ville de livraison&nbsp;État ou province de livraison&nbsp;Code postal de livraison<br />
+                            Pays de livraison
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="space">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="listProduct">
+                            Tableau (Nom/Name, Quantité/Quantity, Prix unitaire/Unit Price, Prix/Price)
+                            <!--<div class="OrderProductListZone">
+                              <table class="OrderProductListTable">
+                                <tbody>
+                                  <tr class="OrderProductListHeaderRow">
+                                    <th class="OrderProductListSkuCell" style="display : none;">SKU</th>
+                                    <th class="OrderProductListNameCell">Name</th>
+                                    <th class="OrderProductListDescriptionCell" style="display : none;">Description</th>
+                                    <th class="OrderProductListQuantityCell">Quantity</th>
+                                    <th class="OrderProductListPriceWithoutDiscountCell" style="display : none;">Price without discount</th>
+                                    <th class="OrderProductListDiscountCell" style="display : none;">Discount</th>
+                                    <th class="OrderProductListPriceCell">Unit price</th>
+                                    <th class="OrderProductListTotalPriceCell">Price</th>
+                                  </tr>
+                                  <tr class="OrderProductListRow">
+                                    <td class="OrderProductListSkuCell" style="display : none;">SKU</td>
+                                    <td class="OrderProductListNameCell">Name</td>
+                                    <td class="OrderProductListDescriptionCell" style="display : none;">Description</td>
+                                    <td class="OrderProductListQuantityCell">0</td>
+                                    <td class="OrderProductListPriceWithoutDiscountCell" style="display : none;">$1.00</td>
+                                    <td class="OrderProductListDiscountCell" style="display : none;">$1.00</td>
+                                    <td class="OrderProductListPriceCell">$0.00</td>
+                                    <td class="OrderProductListTotalPriceCell">$0.00</td>
+                                  </tr>
+                                  <tr class="OrderProductListSubTotalRow">
+                                    <td colspan="2" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListPromoCodeTitleCell">Promo Code</td>
+                                    <td class="OrderProductListPromoCodeCell">- $0.00</td>
+                                  </tr>
+                                  <tr class="OrderProductListSubTotalRow">
+                                    <td colspan="2" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListSubTotalTitleCell">Subtotal</td>
+                                    <td class="OrderProductListSubTotalCell">$0.00</td>
+                                  </tr>
+                                  <tr class="OrderProductListTaxesRow">
+                                    <td colspan="2" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListTaxesTitleCell">Taxes</td>
+                                    <td class="OrderProductListTaxesCell">$0.00</td>
+                                  </tr>
+                                  <tr class="OrderProductListShippingRow">
+                                    <td colspan="2" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListShippingTitleCell">Shipping</td>
+                                    <td class="OrderProductListShippingCell">$0.00</td>
+                                  </tr>
+                                  <tr class="OrderProductListTotalRow">
+                                    <td colspan="2" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListTotalTitleCell">Total</td>
+                                    <td class="OrderProductListTotalCell">$0.00</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>-->
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tax">
+                            <strong>TPS</strong> : #847699253 <strong>TVQ</strong> : #1215641020<br />
+                            <strong>Devise</strong> : CAD
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="anomalie">Si vous remarquez une anomalie, veuillez nous contacter le plus rapidement possible à l'adresse :<br />Having a problem with your purchase? Contact us:&nbsp;<a href="#">info@XXXXX.com</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" class="cell4" valign="top">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" mappingtype="Template">
+                      <tbody>
+                        <tr>
+                          <td align="left" class="cell5" valign="bottom">
+                            <div>
+                              <strong>Qualipièces <br />2075 rue Joseph-St-Cyr<br />Drummondville, Québec&nbsp;&nbsp;J2C&nbsp;0B9<br /></strong>
+                            </div>
+                          </td>
+                          <td align="left" class="cell6" valign="bottom">
+                            <table cellspacing="0" cellpadding="0" mappingtype="Template">
+                              <tbody>
+                                <tr>
+                                  <td align="left" valign="middle" colspan="3" style="color:#fff!important; color:#fff;">
+                                    <a href="#" style="color:#fff!important; color:#fff;">Nous joindre/Contact us</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="left" class="cell8" valign="bottom" colspan="3">
+                                    <div style="display:inline-block;">©&nbsp;XXXX, 2017. Tous droits réservés/All rights reserved</div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>

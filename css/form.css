@@ -1,0 +1,48 @@
+﻿/* FORMULAIRE */
+.alt3form-wrap, .alt3form-wrap div{
+	box-sizing: border-box;
+	-webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+.alt3form-wrap .form-wrapline{
+	clear: both;
+	padding: 20px 0;
+}
+.alt3form-wrap .form-label-text{
+	float: left;
+	width: 40%;
+	padding-right: 10px;
+}
+.alt3form-wrap .form-input-zone{
+	float: left;
+	width: 60%;
+}
+.alt3form-wrap .error{
+	clear: both;
+	color: red;
+	font-size: 0.85em;
+}
+.alt3form-wrap .form-clear{
+	height: 1px;
+	clear: both;
+	display: block;
+}
+/*SPECIFIQUE PAR TYPE DE CHAMP*/
+.alt3form-wrap .form-input input, .alt3form-wrap .form-textarea textarea, .form-select select{
+	width: 100%;
+}
+.form-wrap-checkbox, .form-wrap-radio{
+	display: block;
+	padding-bottom: 5px;
+}
+
+.alt3form-wrap .form-password input{
+	display: block;
+}
+.alt3form-wrap .form-submit{
+	border: none;
+}
+.alt3form-wrap .form-submit input{
+	float: right;
+	clear: both;
+}

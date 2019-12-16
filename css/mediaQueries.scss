@@ -1,0 +1,187 @@
+﻿@import 'mixins.scss';
+
+$mobileFontSize: 16;
+
+@function em($target, $context: $mobileFontSize) {
+  @return ($target / $context) * 1em;
+}
+@function rem($target, $context: $mobileFontSize) {
+  @return ($target / $context) * 1rem;
+}
+@function percent($elem, $container: 384){
+  @return #{(($elem * 100) / $container) + '%'};
+}
+
+@media screen and (min-width: 768px){
+  .m{
+    display:none !important;
+  }
+  a[href^="tel:"] {
+	  text-decoration:none;
+	  cursor:default;
+	  color:inherit;
+	  pointer-events: none;
+    white-space: nowrap; 
+	}
+}
+
+@media screen and (max-width: 767px){
+  .d{
+    display: none!important;
+  }
+  
+  html{
+    font-size: $mobileFontSize * 2px;
+    height: auto;
+  }
+
+  body{
+    min-width: 320px;
+  }
+
+  form{
+    position: relative;
+    display: block;
+    height: auto;
+  }
+
+	$mobileHeaderHeight: 60;
+
+	.header.m {
+		@include flex(row,nowrap,space-between,stretch,stretch);
+		
+		height: rem($mobileHeaderHeight);
+
+		.toggleMenuMobile {
+			@include flex(row,nowrap,center,center,center);
+			width: rem($mobileHeaderHeight);
+
+			&:before {
+				@include awesome("\f0c9");
+				font-weight: 400;
+				color: $c1;
+				font-size: rem(24);
+			}
+
+			&.selected:before {
+				content: "\f00d";
+			}
+		}
+	}
+
+  .footer{
+    .wrapper{
+      @include flex(column,wrap,space-between,center,center);
+
+      .left{
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+	.menuMobile {
+		height: calc(100% - #{rem($mobileHeaderHeight)});
+		top: rem($mobileHeaderHeight);
+		background: rgba(0,0,0,0.5);
+		position: absolute;
+		left: 0;
+		width: 100%;
+		display: none;
+	}
+}
+
+@media screen and (max-width:744px) {
+  html {
+    font-size: $mobileFontSize * 1.9375px;
+  }
+}
+@media screen and (max-width:720px) {
+  html {
+    font-size: $mobileFontSize * 1.875px;
+  }
+}
+@media screen and (max-width:696px) {
+  html {
+    font-size: $mobileFontSize * 1.8125px;
+  }
+}
+@media screen and (max-width:672px) {
+  html {
+    font-size: $mobileFontSize * 1.75px;
+  }
+}
+@media screen and (max-width:648px) {
+  html {
+    font-size: $mobileFontSize * 1.6875px;
+  }
+}
+@media screen and (max-width:624px) {
+  html {
+    font-size: $mobileFontSize * 1.625px;
+  }
+}
+@media screen and (max-width:600px) {
+  html {
+    font-size: $mobileFontSize * 1.5625px;
+  }
+}
+@media screen and (max-width:576px) {
+  html {
+    font-size: $mobileFontSize * 1.5px;
+  }
+}
+@media screen and (max-width:552px) {
+  html {
+    font-size: $mobileFontSize * 1.4375px;
+  }
+}
+@media screen and (max-width:528px) {
+  html {
+    font-size: $mobileFontSize * 1.375px;
+  }
+}
+@media screen and (max-width:504px) {
+  html {
+    font-size: $mobileFontSize * 1.3125px;
+  }
+}
+@media screen and (max-width:480px) {
+  html {
+    font-size: $mobileFontSize * 1.25px;
+  }
+}
+@media screen and (max-width:456px) {
+  html {
+    font-size: $mobileFontSize * 1.1875px;
+  }
+}
+@media screen and (max-width:432px) {
+  html {
+    font-size: $mobileFontSize * 1.125px;
+  }
+}
+@media screen and (max-width:408px) {
+  html {
+    font-size: $mobileFontSize * 1.0625px;
+  }
+}
+@media screen and (max-width:384px) {
+  html {
+    font-size: $mobileFontSize * 1px;
+  }
+}
+@media screen and (max-width:360px) {
+  html {
+    font-size: $mobileFontSize * 0.9375px;
+  }
+}
+@media screen and (max-width:336px) {
+  html {
+    font-size: $mobileFontSize * 0.875px;
+  }
+}
+@media screen and (max-width:320px) {
+  html {
+    font-size: $mobileFontSize * 0.833px;
+  }
+}

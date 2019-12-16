@@ -1,0 +1,231 @@
+﻿/* GLOBAL EDITS */
+
+body{
+ font-size: inherit;
+ color: inherit;
+  font-family: inherit;
+	background-color: transparent;
+}
+
+.portfolio-realex{
+max-width: none;
+background: transparent;
+}
+
+#info-box-footer{
+	border: none;
+}
+
+.container-fluid{
+padding: 0;
+}
+
+#rxp-header{
+display: none;
+}
+
+.rxp-container{
+overflow: hidden;
+}
+
+#info-box-footer, #panelPayWithNewCard{
+margin: 0;
+}
+
+.update-expiry-button, .btn-hpp-a, .update-expiry-button:hover, .update-expiry-button:active, .update-expiry-button:focus, .btn-hpp-a:hover, .btn-hpp-a:active, .btn-hpp-a:focus{
+box-shadow: none;
+outline: 0;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus{
+box-shadow: none;
+outline: 0;
+}
+
+#another-card-section{
+background: transparent;
+border: none;
+box-shadow: none;
+}
+
+#rpx-cardnum-title, #rpx-cardnum-item, #rpx-cardnum-box, #rpx-expiry-date .col-xs-12, #rpx-cardholder-section .col-xs-12, #rpx-security-code .col-xs-12{
+padding: 0;
+}
+
+#info-box-footer{
+padding-top: 0;
+}
+
+.form-control{
+font-size: inherit;
+}
+
+.form-control:focus{
+border-color: inherit;
+box-shadow: none;
+}
+
+#rpx-date-cccvc-section{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-content: flex-start;
+    -webkit-align-content: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+#rpx-expiry-date, #rpx-security-code{
+padding: 0;
+width: 48%;
+}
+
+#rpx-date-cccvc-section:before, #rpx-date-cccvc-section:after{
+display: none;
+}
+
+#rpx-security-code{
+margin-top: 0;
+}
+
+#rxp-footer{
+padding-bottom: 0;
+}
+
+.row{
+	margin: 0;
+}
+
+.dcc-offer-container{
+	margin-top: 24px;
+}
+
+div#rpx-cardnum-title {
+    width: 100%;
+}
+
+div#rpx-cardnum-item {
+    display: none;
+}
+
+/* BUCCO STYLE */
+html{
+color: #000;
+font-size: 14px;
+font-family: "Roboto", sans-serif;
+}
+
+input.form-control{
+    height: 2.42857rem;
+    line-height: 2.42857rem;
+    -webkit-border-radius: 0.35714rem !important;
+    border-radius: 0.35714rem !important;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+#pas_cccvc{
+-webkit-border-radius: 0.35714rem 0 0 0.35714rem !important;
+    border-radius: 0.35714rem 0 0 0.35714rem !important; 
+}
+
+.input-group-addon{
+    -webkit-border-radius: 0 0.35714rem 0.35714rem 0 !important;
+    border-radius: 0 0.35714rem 0.35714rem 0 !important; 
+}
+
+input.form-control, .input-group-addon{
+border-color: #888b89;
+}
+
+.btn-hpp-a{
+background: #08b89d;
+    border: 2px #08b89d solid;
+    font-size: 1.5rem;
+}
+
+.btn-hpp-a:hover{
+background: transparent;
+color: #08b89d;
+}
+
+@media screen and (max-width: 453px) {
+  html {
+    font-size: 28px;
+  }
+
+  #rpx-date-cccvc-section{
+    display: block;
+  }
+
+  #rpx-expiry-date, #rpx-security-code{
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  input.form-control{
+    height: 3.14286rem;
+    line-height: 3.14286rem;
+}	
+
+input.form-control, .input-group-addon{
+border-width: 2px;
+}
+
+.btn-hpp-a{
+font-size: 1rem;
+height: 3.14286rem;
+line-height: 3.14286rem;
+padding: 0
+}
+
+}
+@media screen and (max-width: 424px) {
+  html {
+    font-size: 26.225px;
+  }
+}
+@media screen and (max-width: 396px) {
+  html {
+    font-size: 24.5px;
+  }
+}
+@media screen and (max-width: 368px) {
+  html {
+    font-size: 22.75px;
+  }
+}
+@media screen and (max-width: 340px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 311px) {
+  html {
+    font-size: 19.225px;
+  }
+}
+@media screen and (max-width: 283px) {
+  html {
+    font-size: 17.5px;
+  }
+}
+@media screen and (max-width: 255px) {
+  html {
+    font-size: 15.75px;
+  }
+}
+@media screen and (max-width: 227px) {
+  html {
+    font-size: 14px;
+  }
+}
+

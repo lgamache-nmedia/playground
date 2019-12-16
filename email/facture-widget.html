@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Commande</title>
+
+  <style type="text/css">
+.cellInvoice{
+	padding:22px 28px 32px 28px;
+}
+
+.cellInvoice h2{
+  margin-bottom: 22px!important;
+	margin-bottom: 22px;
+}
+
+.cellInvoice h3{
+  margin-top: 0px!important;
+	margin-top: 0;
+	margin-bottom: 0px!important;
+	margin-bottom: 0;
+}
+
+td.thankYou{
+	font-size: 16px!important;
+	font-size: 16px;
+	font-weight: bold!important;
+	font-weight: bold;
+}
+
+.space1 {
+	height:15px !important;
+  height: 15px;
+  line-height: 15px !important;
+  line-height: 15px;
+  font-size: 15px !important;
+  font-size: 15px;
+}
+
+.listProduct table {width:100%;}
+.listProduct table th, .listProduct table td{font-size:12px!important;font-size:12px;}
+.listProduct table th p, .listProduct table td p {line-height:normal!important; line-height:normal;}
+.listProduct th {font-weight:bold!important; font-weight: bold;}
+
+.OrderProductListTable {border-collapse:collapse;}
+.OrderProductListTable th, .OrderProductListTable td {border:1px #ececec solid;}
+
+.OrderProductListSkuCell {text-align:left;}
+.OrderProductListNameCell {text-align:left;}
+.OrderProductListDescriptionCell {text-align:left;}
+.OrderProductListQuantityCell {width:50px;}
+.OrderProductListPriceWithoutDiscountCell {width:67px;}
+.OrderProductListDiscountCell {}
+.OrderProductListPriceCell {width:85px;} 
+.OrderProductListTotalPriceCell {width:65px;}
+.OrderProductListSkuCell,
+.OrderProductListNameCell,
+.OrderProductListQuantityCell,
+.OrderProductListPriceCell,
+.OrderProductListTotalPriceCell,
+.OrderProductListSubTotalTitleCell,
+.OrderProductListSubTotalCell,
+.OrderProductListTaxesTitleCell,
+.OrderProductListTaxesCell,
+.OrderProductListShippingTitleCell,
+.OrderProductListShippingCell,
+.OrderProductListTotalTitleCell,
+.OrderProductListTotalCell,
+.OrderProductListPriceWithoutDiscountCell,
+.OrderProductListDiscountCell,
+.OrderProductListDescriptionCell,
+.OrderProductListPromoCodeTitleCell,
+.OrderProductListPromoCodeCell {padding:5px; font-family: Arial !important; font-family: Arial; color: #6b6b6b !important; color: #6b6b6b; line-height:1.5em; font-size: 12px !important; font-size: 12px;}
+
+.OrderProductListQuantityCell, 
+.OrderProductListPriceCell, 
+.OrderProductListTotalPriceCell,
+.OrderProductListSubTotalCell,
+.OrderProductListTaxesCell,
+.OrderProductListShippingCell,
+.OrderProductListTotalCell,
+.OrderProductListSubTotalTitleCell,
+.OrderProductListTaxesTitleCell,
+.OrderProductListShippingTitleCell,
+.OrderProductListTotalTitleCell,
+.OrderProductListDiscountCell,
+.OrderProductListPriceWithoutDiscountCell,
+.OrderProductListPromoCodeTitleCell,
+.OrderProductListPromoCodeCell {text-align:right;}
+
+td.tax {text-align: center; font-size: 12px !important; font-size: 12px; line-height: 160%!important; line-height: 160%;}
+
+</style>
+</head>
+<body>
+  <form>
+	
+	<!-- DÉBUT DU CONTROLE -->
+	<!-- Dans les propriétés, il faut 2 cases à cocher (pas coché par défaut) qui permet de gérer l'affichage de certaines colonnes ou pas.
+		Afficher les SKU -> ajouter ce css lorsque la case est décochée : .OrderProductListSkuCell{display: none!important} et changer les colspan plus bas
+		Afficher les prix avec rabais -> jouter ce css lorsque la case est décochée : .OrderProductListPriceWithoutDiscountCell, .OrderProductListDiscountCell{display: none!important} et changer les colspan plus bas
+	-->
+	
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td align="center" class="cell1" valign="middle">
+            <table width="540" align="center" cellspacing="0" cellpadding="0" valign="top">
+              <tbody>
+                <tr>
+                  <td align="left" class="cellInvoice" valign="top">
+                    <table style="width: 100%;" cellspacing="0" cellpadding="0" mappingtype="Template">
+                      <tbody>
+                        <tr><td class="thankYou">[Merci d’avoir fait un achat chez]&nbsp;XXXX</td></tr>
+                        <tr>
+                          <td colspan="1">
+                            <p class="numero">
+                              Broker_Nom_de_lacheteur&nbsp;(Broker_Email)<br />
+                              Broker_Numero_Telephone<br /><br />
+                              [Numéro de commande :]&nbsp;Broker_Numero_Commande<br />
+                              [Numéro de paiement :]&nbsp;Broker_Numero_Paiement<br />
+                              Broker_Date_Creation_Commande
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="1"><h2>[Détails de la transaction]</h2></td>
+                        </tr>
+                        <tr>
+                          <td colspan="1"><h3>[Adresse de facturation]</h3></td>
+                        </tr>
+                        <tr>
+                          <td class="adresse">
+													<p>
+                            Broker_Adresse_Livraison<br />
+                            Broker_Ville_Livraison&nbsp;Broker_Province_Livraison&nbsp;Broker_CodePostal_Livraison<br />
+                            Broker_Pays_Livraison
+														</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="listProduct">
+                            <div class="OrderProductListZone">
+                              <table class="OrderProductListTable">
+                                <tbody>
+                                  <tr class="OrderProductListHeaderRow">
+                                    <th class="OrderProductListSkuCell">SKU</th>
+                                    <th class="OrderProductListNameCell">[Nom]</th>
+                                    <th class="OrderProductListDescriptionCell" style="display : none;">Description</th>
+                                    <th class="OrderProductListQuantityCell">[Quantité]</th>
+                                    <th class="OrderProductListPriceWithoutDiscountCell">[Prix sans rabais]</th>
+                                    <th class="OrderProductListDiscountCell">[Rabais]</th>
+                                    <th class="OrderProductListPriceCell">[Prix unitaire]</th>
+                                    <th class="OrderProductListTotalPriceCell">[Prix]</th>
+                                  </tr>
+																	
+																	
+																	<!-- for each -->
+                                  <tr class="OrderProductListRow">
+                                    <td class="OrderProductListSkuCell">123456</td>
+                                    <td class="OrderProductListNameCell">Mangeoir pour petits oiseaux poilus</td>
+                                    <td class="OrderProductListQuantityCell">4</td>
+                                    <td class="OrderProductListPriceWithoutDiscountCell">11,00 $</td>
+                                    <td class="OrderProductListDiscountCell">1,00 $</td>
+                                    <td class="OrderProductListPriceCell">10,00 $</td>
+                                    <td class="OrderProductListTotalPriceCell">40,00 $</td>
+                                  </tr>
+																	
+																	<!-- Le colspan des prochaines cellules dépend des options voulues : Initialement il est à 2.
+																	
+																	Si on veut faire afficher le SKU, on fait +1
+																	Si on veut faire afficher les rabais, on fait +2
+																	
+																	-->
+																	
+                                  <tr class="OrderProductListSubTotalRow">
+                                    <td colspan="5" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListPromoCodeTitleCell">[Code Promo]</td>
+                                    <td class="OrderProductListPromoCodeCell">- 2,00 $</td>
+                                  </tr>
+                                  <tr class="OrderProductListSubTotalRow">
+                                    <td colspan="5" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListSubTotalTitleCell">[Sous-total]</td>
+                                    <td class="OrderProductListSubTotalCell">38,00 $</td>
+                                  </tr>
+																	
+																	<!-- Si on souhaite afficher les taxes combinés-->
+																	<!--
+                                  <tr class="OrderProductListTaxesRow">
+                                    <td colspan="5" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListTaxesTitleCell">Taxes</td>
+                                    <td class="OrderProductListTaxesCell">3,00 $</td>
+                                  </tr>
+																	-->
+																	
+																	<!-- Si on souhaite afficher les différentes taxes -->
+                                  <tr class="OrderProductListTaxesRow">
+                                    <td colspan="5" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListTaxesTitleCell">Broker_NomdeTaxe1</td>
+                                    <td class="OrderProductListTaxesCell">3,00 $</td>
+                                  </tr>
+																	<tr class="OrderProductListTaxesRow">
+                                    <td colspan="5" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListTaxesTitleCell">Broker_NomdeTaxe2</td>
+                                    <td class="OrderProductListTaxesCell">10,00 $</td>
+                                  </tr>
+																	
+																	<!-- Ne pas oublier de mettre le bon ordre dépendemment si le shipping est taxable ou non -->
+                                  <tr class="OrderProductListShippingRow">
+                                    <td colspan="5" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListShippingTitleCell">[Livraison]</td>
+                                    <td class="OrderProductListShippingCell">0,00 $</td>
+                                  </tr>
+                                  <tr class="OrderProductListTotalRow">
+                                    <td colspan="5" class="OrderProductListColSpanCell"></td>
+                                    <td class="OrderProductListTotalTitleCell">Total</td>
+                                    <td class="OrderProductListTotalCell">51,00 $</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="tax">
+													  <!-- Cette zone sera éditable -->
+                            <div><strong>TPS</strong> : #xxxxxxxx <strong>TVQ</strong> : #xxxxxxxxx</div>
+														<!-- Fin de la zone éditable -->
+                            <strong>[Devise]</strong> : Broker_Devise_Commande
+                          </td>
+                        </tr>
+												<tr>
+                          <td class="space">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td class="anomalie">
+														<!-- Zone éditable -->
+														<div>
+														[Si vous remarquez une anomalie, veuillez nous contacter le plus rapidement possible à l'adresse :] &nbsp;<a href="#">info@XXXXX.com</a>
+														</div>
+													</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+		
+		<!-- FIN DU CONTROLE -->
+		
+		
+		
+  </form>
+</body>
+</html>

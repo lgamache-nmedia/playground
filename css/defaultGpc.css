@@ -1,0 +1,1072 @@
+﻿.FacetedExplorer {
+  outline: none;
+}
+
+.GpcMenuWrapper {
+  float: left;
+  width: 20%;
+  margin-right: 5%;
+}
+
+.GpcFacetedResults {
+  float: left;
+  width: 75%;
+}
+
+.GpcMenu {
+  padding: 0;
+  margin: 0;
+}
+
+  .GpcMenu li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+    .GpcMenu li input[type="checkbox"] {
+      margin-right: 5px;
+      vertical-align: text-top;
+    }
+
+.GpcMenuItemCount {
+  padding-left: 5px;
+}
+
+.GpcMenu li a {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.GpcMenu li ul {
+  padding-left: 0px;
+}
+
+  .GpcMenu li ul li {
+    margin-bottom: 0;
+    padding-left: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+
+    .GpcMenu li ul li a {
+      font-weight: normal;
+    }
+
+    .GpcMenu li ul li.selected a, .GpcMenu li ul li.selected .GpcMenuItemCount {
+      font-weight: bold;
+    }
+
+.GpcItemHorizontal {
+  float: left;
+  margin-right: 2px;
+}
+
+
+.GpcResultItemWrapper {
+  padding: 10px 0;
+  width: 100%;
+  float: left;
+}
+
+.GpcResultPager {
+  float: left;
+  white-space: nowrap;
+}
+
+  .GpcResultPager a, .GpcDisplayOption {
+    border: 1px solid #d3d3d3;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1px;
+    padding: 4px 8px;
+    line-height: 1em;
+    cursor: pointer;
+  }
+
+    .GpcResultPager a:first-child, .GpcResultPager a:last-child {
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+
+    .GpcResultPager a:hover, .GpcResultPager a.selected, .GpcDisplayOption:hover, .GpcDisplayOption.selected {
+      background-color: #d3d3d3;
+    }
+
+.GpcPagerCountSelector {
+  float: right;
+}
+
+.GpcClear {
+  clear: both;
+}
+
+.GpcPagedResultCount {
+  float: left;
+  max-width: 50%;
+}
+
+.GpcPagedResultCurrentCount {
+  font-weight: bold;
+}
+
+.GpcResultOrderSelector {
+  float: right;
+  max-width: 50%;
+}
+
+.GpcWrapFakeSelectBox {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("/_images/fleche-bas.png");
+  background-repeat: no-repeat;
+  background-position: 97% center;
+  border: 1px solid #dedede;
+  background-color: #ffffff;
+  padding: 3px 30px 3px 10px;
+  height: 30px;
+  line-height: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.GpcWrapSelectBox {
+  padding: 0;
+}
+
+.GpcWrapFakeSelectBox {
+  overflow: visible;
+}
+
+.GpcFakeSelect {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #FFF;
+  width: 100%;
+  border-left: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  z-index: 1000;
+}
+
+  .GpcFakeSelect.GpcReverseSelect {
+    bottom: 100%!important;
+    top: auto;
+  }
+
+.GpcWrapFakeSelectBox:hover .GpcFakeSelect {
+  display: block;
+}
+
+
+.GpcFakeSelectOption {
+  padding: 3px 10px 3px 10px;
+  border-bottom: 1px solid #d7d7d7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  .GpcFakeSelectOption:first-child {
+    border-top: 1px solid #d7d7d7;
+  }
+
+  .GpcFakeSelectOption:last-child {
+    border-bottom: none;
+  }
+
+  .GpcFakeSelectOption:hover {
+    background: #eee;
+  }
+
+li[disabled] > a, a[disabled] {
+  pointer-events: none;
+  cursor: default;
+  color: gray!important;
+}
+
+li[disabled] {
+  pointer-events: none;
+}
+
+.GpcCountPrefixText {
+  margin-right: 5px;
+}
+
+.GpcBetweenCountText {
+  margin: 0 5px;
+}
+
+.GpcItemsPerPageText {
+  margin-right: 5px;
+}
+
+.GpcPagerCountSelector .GpcWrapFakeSelectBox {
+  width: auto;
+  display: inline-block;
+}
+
+/* DEFAULT FACETS */
+.GpcResultItemWrapper.defaultFacet {
+  font-size: 0px;
+}
+
+.defaultFacet .FacetedResultTemplate {
+  width: 18%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 2%;
+  margin-right: 1%;
+  min-width: 140px;
+  font-size: 1rem;
+}
+
+.defaultFacet .ResultContent span {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.defaultFacet .ResultContentProductName {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* HORIZONTAL FACETS */
+.horizontalFacet .FacetedResultTemplate {
+  width: 23%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 2%;
+  margin-right: 1%;
+  min-width: 265px;
+}
+
+.horizontalFacet .ResultImage {
+  float: left;
+  width: 25%;
+}
+
+.horizontalFacet .ResultContent {
+  float: left;
+  width: 73%;
+  margin-left: 2%;
+}
+
+  .horizontalFacet .ResultContent span {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+.horizontalFacet .ResultContentProductName {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* FULL WIDTH FACETS */
+.fullWidthFacet .FacetedResultTemplate {
+  width: 100%;
+  margin-bottom: 2%;
+  float: left;
+  padding-bottom: 2%;
+  border-bottom: 1px solid;
+}
+
+.fullWidthFacet .ResultImage {
+  float: left;
+}
+
+.fullWidthFacet .ResultContent {
+  float: left;
+  margin-left: 2%;
+}
+
+  .fullWidthFacet .ResultContent span {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+.fullWidthFacet .ResultContentProductName {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* IMAGE */
+
+.fullWidthFacet .ResultImage img, .defaultFacet .ResultImage img, .horizontalFacet .ResultImage img {
+  max-width: 100%;
+}
+
+.defaultFacet .ResultImage, .fullWidthFacet .ResultImage, .horizontalFacet .ResultImage {
+  overflow: hidden;
+  text-align: center;
+  background: #fbfbfb;
+}
+
+.FacetMenuDropDownValues {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background: #FFF;
+  width: 100%;
+  border-left: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  z-index: 1000;
+}
+
+
+.FacetMenuDropDown {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background-image: url("/_images/fleche-bas.png");
+  background-repeat: no-repeat;
+  background-position: 97% center;
+  border: 1px solid #dedede;
+  background-color: #ffffff;
+  padding: 3px 30px 3px 10px;
+  height: 30px;
+  line-height: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.GpcDropDownMenuItem {
+  padding: 3px 10px 3px 10px;
+  border-bottom: 1px solid #d7d7d7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+:first-child.GpcDropDownMenuItem {
+  border-top: 1px solid #d7d7d7;
+}
+
+.GpcDropDownMenuItem:hover {
+  background: #eee;
+}
+
+/***************************************************************/
+/* Début des CSS pour controles de cart                        */
+.GpcClearfix {
+  *zoom: 1;
+}
+
+  .GpcClearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Shopping cart */
+.GpcCartPreview {
+  padding: 1.15em;
+}
+
+.GpcCartPreviewTitle {
+  font-size: 1.5em;
+  line-height: 1.15em;
+  padding-bottom: 0.5em;
+}
+
+.GpcCartProduct {
+  margin-bottom: 1.25em;
+  position: relative;
+}
+
+.GpcCartProductImg {
+  float: left;
+  width: 20%;
+}
+
+.GpcCartProductImage {
+  max-width: 100%;
+}
+
+.GpcCartProductInfos {
+  float: right;
+  width: 77%;
+}
+
+.GpcCartProductTitle {
+  font-size: 1.15em;
+  font-weight: bold;
+  padding-bottom: 0.25em;
+}
+
+.GpcCartProductInfo {
+  font-size: 0.85em;
+}
+
+.GpcCartPreviewContinue, .GpcCartPreviewCheckout {
+  display: block;
+  float: left;
+  padding: 0.25em 0.5em;
+  max-width: 45%;
+  box-sizing: border-box;
+}
+
+.GpcCartPreviewCheckout {
+  float: right;
+}
+
+/* Calcul de quantité */
+.GpcCartCalc {
+  margin: 1em 0;
+  white-space: nowrap;
+}
+
+.GpcCartCalcSubstr, .GpcCartCalcResult, .GpcCartCalcAdd {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.25em 0.375em;
+  text-align: center;
+  width: 1em;
+  *display: inline;
+  *zoom: 1;
+}
+
+.GpcCartCalcResult {
+  width: 2em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.GpcCartCalcSubstr, .GpcCartCalcAdd, .GpcCartAddBtn {
+  cursor: pointer;
+}
+
+.GpcCartAddBtn {
+  margin: 1em 0;
+  padding: 0.25em 1em;
+  display: inline-block;
+  *zoom: 1;
+}
+
+.GpcCartCalc + .GpcCartAddBtn {
+  margin-top: 0;
+}
+
+.GpcCartAddSingleLine .GpcCartCalc {
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* Divers */
+.GpcCartShipping, .GpcCartSizes, .GpcCartColors, .GpcCartPriceDetails {
+  margin: 1em 0;
+}
+
+/* Liste radio */
+.GpcCartRadioLabel {
+  display: block;
+  margin: 0.25em 0;
+}
+
+.GpcCartRadio {
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+.GpcCartRadioLabel.selected {
+  font-weight: bold;
+}
+
+/* Couleurs d'un produit */
+.GpcCartColor {
+  display: inline-block;
+  vertical-align: top;
+  height: 1.5em;
+  width: 1.5em;
+  cursor: pointer;
+  margin: 0 0.25em 0.25em 0;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+  .GpcCartColor.selected, .GpcCartColor:hover {
+    border-color: #000;
+  }
+
+  .GpcCartColor img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+/* Détails d'un prix */
+.GpcCartPriceDetailsTitle {
+  vertical-align: top;
+  text-align: left;
+}
+
+.GpcCartPriceDetailsAmount {
+  text-align: right;
+  vertical-align: top;
+}
+
+.GpcCartPriceDetailsTotal {
+  font-size: 1.25em;
+}
+
+  .GpcCartPriceDetailsTotal td {
+    padding-top: 0.5em;
+  }
+
+  .GpcCartPriceDetailsTotal .GpcCartPriceDetailsAmount {
+    font-weight: bold;
+  }
+
+.GpcCartSubmitOrder {
+  display: inline-block;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+/* Liste de produits dans le sac (Checkout) */
+.GpcCartProductQty, .GpcCartProductSinglePrice, .GpcCartProductSingleTotalPrice {
+  float: left;
+  width: 33%;
+}
+
+  .GpcCartProductQty .GpcCartCalc {
+    margin: 0;
+  }
+
+.GpcCartProductPrices {
+  margin: 0.5em 0;
+}
+
+.GpcCartProductSinglePriceVal {
+  font-size: 1.25em;
+}
+
+.GpcCartProductSingleTotalPriceVal {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.GpcCartProductDelete {
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+.GpcCartShipping {
+  display: none;
+}
+
+.GpcCartPostalCodeSearch {
+  cursor: pointer;
+}
+
+.GpcCartSummaryTitleZone {
+  cursor: pointer;
+}
+
+/* Fin des CSS pour controles de cart                        */
+/*************************************************************/
+
+/* Css de rating de produit */
+.ratingValue {
+  display: inline-block;
+  margin-left: 5px;
+  background-image: url(/_images/productRating/rating_star_25.png);
+  width: 25px;
+  height: 25px;
+}
+
+  .ratingValue .firstHalf {
+    float: left;
+    height: 25px;
+    width: 13px;
+  }
+
+    .ratingValue .firstHalf.selected {
+      background-image: url(/_images/productRating/rating_star_firstHalf_selected_25.png);
+    }
+
+  .ratingValue.selected {
+    background-image: url(/_images/productRating/rating_star_selected_25.png);
+  }
+
+.ratingSuccessZone {
+  display: none;
+}
+
+.ratingErrorZone {
+  display: none;
+}
+
+/* Styles des évaluations de produits */
+.GpcAddProductRating .ratingAdd {
+  cursor: pointer;
+}
+
+.ratingError {
+  color: red;
+}
+
+.GpcRating {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.33em;
+}
+
+.GpcRatingIcon {
+  display: inline-block;
+  height: 1.5em;
+  width: 1.55em;
+  background: url(/_images/productRating/GpcRatingIcon.png) no-repeat center bottom;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  background-size: 100% auto;
+  position: relative;
+}
+
+.GpcAddProductRating .GpcRatingIcon {
+  cursor: pointer;
+}
+
+.GpcProductRatingComments .GpcRatingIcon, .GpcAddProductRating .GpcRatingIcon, .GpcProductRatingAverage .GpcRatingIcon {
+  background-image: url(/_images/productRating/GpcRatingIconIE8Medium.png)\9;
+}
+
+.GpcRatingIcon + .GpcRatingIcon {
+  margin-left: 0.38em;
+}
+
+.GpcRatingHalf {
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 50%;
+}
+
+.GpcRatingFull {
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
+  width: 50%;
+}
+
+.GpcRatingIcon.emptySelected {
+  background-position: center bottom;
+}
+
+.GpcRatingIcon.halfSelected {
+  background-position: center;
+}
+
+.GpcRatingIcon.fullSelected {
+  background-position: center top;
+}
+
+.GpcRatingIcon.empty {
+  background-position: center bottom;
+}
+
+.GpcRatingIcon.half {
+  background-position: center;
+}
+
+.GpcRatingIcon.full {
+  background-position: center top;
+}
+
+.GpcRatingOverall {
+  margin: 0 0.3em 0 0.925em;
+  font-size: 1.33em;
+  display: inline-block;
+}
+
+.GpcRatingNb {
+  display: inline-block;
+}
+
+.GpcRatingNb span{
+  display: inline-block !important;
+}
+
+.GpcRatingText {
+  display: inline-block;
+}
+
+.GpcRatingIcon.tempEmpty {
+  background-position: center bottom;
+}
+
+.GpcRatingNbRatingsPrefixText {
+  display: inline-block;
+}
+
+.GpcRatingNbRatings {
+  display: inline-block;
+}
+
+.GpcRatingNbRatingsText {
+  display: inline-block;
+}
+
+.GpcRatingNbRatingsLabel {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Styles des évaluations de produits autre que les étoiles */
+.GpcRatingOpenForm {
+  margin: 0.3em 0;
+}
+
+.GpcRatingResult {
+  display: table;
+}
+
+.GpcRatingResultLeft {
+  width: 29.15789%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  padding: 0.625em;
+  display: table-cell;
+  vertical-align: top;
+  border: none;
+}
+
+.GpcRatingResultDate {
+  font-style: italic;
+  font-size: 0.75em;
+  margin-top: 0.4em;
+}
+
+.GpcRatingWrapProductRatings {
+  margin-top: 2em;
+  font-size: 0.75em;
+}
+
+.GpcRatingProductRating table {
+  border: none;
+  border-collapse: collapse;
+}
+
+.GpcRatingProductRating .GpcRating {
+  margin-bottom: 0;
+}
+
+.GpcRatingProductRating table td {
+  padding-right: 1em;
+  vertical-align: middle;
+  padding-bottom: 0.25em;
+}
+
+.GpcRatingResultVerticalSpacer {
+  width: 3px;
+}
+
+.GpcRatingResultHorizontalSpacer {
+  height: 6px;
+}
+
+.GpcRatingResultRight {
+  width: 70.84211%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  padding: 1em 3em 1em 1.25em;
+  line-height: 1.15em;
+  display: table-cell;
+  vertical-align: top;
+  border: none;
+}
+
+.GpcRatingResultName {
+  font-weight: bold;
+  font-size: 0.875em;
+}
+
+.GpcRatingResultText {
+  font-size: 0.75em;
+}
+
+  .GpcRatingResultText p {
+    margin-bottom: 1em;
+    margin-top: 0;
+  }
+
+/*Nouvel élément HTML*/
+.GpcResultOrderSelect {
+  display: inline-block;
+}
+
+.GpcRatingResultsBottom {
+  margin-top: 1.25em;
+}
+
+  .GpcRatingResultsBottom .GpcPagedResultCount {
+    float: left;
+  }
+
+  .GpcRatingResultsBottom .GpcResultPager {
+    float: right;
+  }
+
+.GpcRatingResultsTop {
+  margin-bottom: 0.71428em;
+  font-size: 0.875em;
+}
+
+.GpcRatingFeature {
+  margin-bottom: .5em;
+}
+
+.GpcRatingFeatureLabel {
+  margin-bottom: 0.5em;
+}
+
+  .GpcRatingFeatureLabel strong {
+    text-transform: uppercase;
+  }
+
+.GpcRatingForm input[type="text"], .GpcRatingForm textarea {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.GpcRatingForm textarea {
+  height: 8.0625em;
+  resize: vertical;
+}
+
+.GpcRatingFormItem {
+  margin-bottom: .5em;
+}
+
+  .GpcRatingFormItem label {
+    margin-bottom: 0.5em;
+    display: inline-block;
+  }
+
+.GpcRatingFormActionsLeft {
+  float: left;
+}
+
+.GpcRatingFormActionsRight {
+  float: right;
+}
+
+.GpcCommentsFooter .GpcResultPager {
+  float: right;
+}
+
+.GpcRatingWrapQuery {
+  clear:both;
+}
+
+.GpcBeforeResultOrderSelector {
+  float: left;
+  height: 0px;
+}
+
+/* HORIZONTAL */
+.GpcImageViewerHorizontal .GpcLightBoxZone  
+{
+  border: 1px solid rgb(189, 189, 189);
+  width: 498px;
+  overflow: hidden;
+  margin-bottom: 2px;
+  height: 373px;
+}
+.GpcImageViewerHorizontal .GpcCarouselAndButtons  
+{
+  width: 500px;
+  
+}
+.GpcImageViewerHorizontal .GpcCarouselPrevious  
+{
+  background-position: left -70px;
+  margin: 0px 1px 0px 0px;
+  width: 21px;
+  height: 70px;
+  float: left;
+  cursor: pointer;
+  background-image: url(/_images/gpcViewerLeftArrow.jpg);
+  background-repeat: no-repeat;
+  
+}
+.GpcImageViewerHorizontal .GpcCarouselNext  
+{
+  background-position: left -70px;
+  margin: 0px 0px 0px 1px;
+  width: 21px;
+  height: 70px;
+  float: left;
+  cursor: pointer;
+  background-image: url(/_images/gpcViewerRightArrow.jpg);
+  background-repeat: no-repeat;
+  
+}
+.GpcImageViewerHorizontal .GpcCarouselPrevious:hover, .GpcImageViewerHorizontal .GpcCarouselNext:hover  
+{
+  background-position: left -140px;
+  
+}
+.GpcImageViewerHorizontal .disabled.GpcCarouselPrevious, .GpcImageViewerHorizontal .disabled.GpcCarouselNext  
+{
+  background-position: left 0px;
+}
+.GpcImageViewerHorizontal .GpcCarouselWrapper  
+{
+  width: 456px;
+  height: 70px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+.GpcImageViewerHorizontal .GpcImageViewerItem  
+{
+  margin: 0px 1px;
+  border: 1px solid rgb(189, 189, 189);
+  width: 110px;
+  height: 68px;
+  overflow: hidden;
+  float:left;
+  text-align :center;
+}
+
+.GpcImageViewerHorizontal .GpcImageViewerItem  img{
+	max-width: 100%;
+}
+
+.GpcImageViewerHorizontal  
+{
+  width: 500px;
+  
+}
+
+/* VERTICAL */
+
+.GpcImageViewerVertical .GpcLightBoxZone  
+{
+  border: 1px solid rgb(189, 189, 189);
+  width: 498px;
+  height: 373px;
+  overflow: hidden;
+  margin-right: 2px;
+  float: left;
+}
+.GpcImageViewerVertical .GpcCarouselAndButtons  
+{
+  width: 100px;
+  float: left;
+  height: 375px;
+}
+.GpcImageViewerVertical .GpcCarouselPrevious  
+{
+  background-position: -100px top;
+  margin: 0px 0px 1px 0px;
+  width: 100px;
+  height: 24px;
+  cursor: pointer;
+  background-image: url(/_images/gpcViewerTopArrow.jpg);
+  background-repeat: no-repeat;
+  
+}
+.GpcImageViewerVertical .GpcCarouselNext  
+{
+  background-position: -100px top;
+  margin: 1px 0px 0px 0px;
+  width: 100px;
+  height: 24px;
+  cursor: pointer;
+  background-image: url(/_images/gpcViewerBottomArrow.jpg);
+  background-repeat: no-repeat;
+  
+}
+.GpcImageViewerVertical .GpcCarouselPrevious:hover, .GpcImageViewerVertical .GpcCarouselNext:hover  
+{
+  background-position: -200px top;
+  
+}
+.GpcImageViewerVertical .disabled.GpcCarouselPrevious, .GpcImageViewerVertical .disabled.GpcCarouselNext  
+{
+  background-position: 0px top;
+}
+.GpcImageViewerVertical .GpcCarouselWrapper  
+{
+  width: 100px;
+  height: 325px;
+  overflow: hidden;
+  position: relative;
+}
+.GpcImageViewerVertical .GpcImageViewerItem  
+{
+  margin: 1px 0px 2px;
+  border: 1px solid rgb(189, 189, 189);
+  width: 98px;
+  height: 61px;
+  overflow: hidden;
+  
+}
+
+.GpcImageViewerVertical .GpcLightBoxZone
+{
+  float:left;
+}
+
+.GpcImageViewerVertical  
+{
+  width: 602px;
+}
+
+/* TILES */
+
+.GpcImageViewerTiles {
+  width: 100%;
+}
+
+.GpcImageViewerTiles .GpcImageViewerItem {
+  float: left;
+  margin: 0px 2px 2px 0px;
+  border: 1px solid rgb(189, 189, 189);
+  width: 110px;
+  height: 68px;
+  overflow: hidden;
+}
+
+/* MISC */
+.GpcClear {
+  clear: both;
+  height: 0px;
+}
+
+.lightbox-container-image {
+  padding: 0!important;
+}
+
+.lightbox-container-image-box{
+ background: transparent;
+}

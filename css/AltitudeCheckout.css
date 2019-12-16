@@ -1,0 +1,336 @@
+﻿.wrapperTemporaire {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.btn.disabled, .btn.disabled:hover {
+  background: #dadada;
+  color: #b6b6b6;
+  cursor: default;
+}
+
+.CreditCardInformationsClass .ShippingFormInput {
+  background: #fff;
+}
+
+.GpcShippingInformationsZone, .GpcPaymentInformationsZone {
+  width: 75.59%;
+  margin-top: 36px;
+  margin-top: 2.25rem;
+}
+
+  .GpcShippingInformationsZone .ShippingInformationsSection, .GpcShippingInformationsZone .ContactInformationsSection, .GpcPaymentInformationsZone .BillingInformationsSection, .GpcPaymentInformationsZone .PaymentInformationsSection {
+    float: left;
+    width: 50%;
+  }
+
+  .GpcShippingInformationsZone .ShippingFormItem, .GpcPaymentInformationsZone .ShippingFormItem {
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .GpcShippingInformationsZone .ShippingFormLabel, .GpcPaymentInformationsZone .ShippingFormLabel {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+  }
+
+  .GpcShippingInformationsZone .ShippingFormInput, .GpcPaymentInformationsZone .ShippingFormInput {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+  }
+
+    .GpcShippingInformationsZone .ShippingFormInput input, .GpcShippingInformationsZone .ShippingFormInput select, .GpcPaymentInformationsZone .ShippingFormInput input, .GpcPaymentInformationsZone .ShippingFormInput select {
+      width: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 25px;
+    }
+
+  .GpcShippingInformationsZone .ShippingSelectionSection {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #ccc;
+    margin-top: 16px;
+    margin-top: 1rem;
+  }
+
+  .GpcShippingInformationsZone .ShippingInformationsShippingLabel {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+    margin-right: 1rem;
+  }
+
+  .GpcShippingInformationsZone .GpcCartShippingSelector {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+    margin-left: 1rem;
+  }
+
+  .GpcShippingInformationsZone .ShippingInformationsNextStepSection {
+    text-align: right;
+    margin-top: 16px;
+    margin-top: 1rem;
+  }
+
+  .GpcPaymentInformationsZone .PaymentInformationsSameAddressCheckboxZone {
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .GpcPaymentInformationsZone .PaymentInformationsCreditCardInputZone, .GpcPaymentInformationsZone .PaymentInformationsExpirationDateInputZone, .GpcPaymentInformationsZone .PaymentInformationsCVVInputZone {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 25px;
+    border: 1px solid #a9a9a9;
+  }
+
+  .GpcPaymentInformationsZone .PaymentInformationsCreditCardInputZone {
+    width: 100%;
+  }
+
+  .GpcPaymentInformationsZone .PaymentInformationsExpirationDateInputZone {
+    width: 100%;
+  }
+
+  .GpcPaymentInformationsZone .PaymentInformationsCVVInputZone {
+    width: 100%;
+  }
+
+.clearfix {
+  zoom: 1;
+}
+
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.GpcPaymentInformationsZone .PaymentButtonZone {
+  text-align: right;
+  margin-top: 16px;
+  margin-top: 1rem;
+}
+
+  .GpcPaymentInformationsZone .PaymentButtonZone .PaymentButtonLabel {
+    margin-right: 16px;
+    margin-right: 1rem;
+    display: inline-block;
+  }
+
+.ShippingInformationsNextStepButton, .GpcCartProceedToCheckoutButton {
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  cursor: pointer;
+  background: white;
+}
+
+  .ShippingInformationsNextStepButton:hover, .GpcCartProceedToCheckoutButton:hover {
+    background: #ccc;
+  }
+
+.PaymentCardIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.CVVCardIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.PaymentChooseMethod {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+
+  .PaymentChooseMethod label {
+    display: inline-block;
+    margin-right: 37px;
+  }
+
+.GpcCartDeliveryPrice {
+  margin-left: 8px;
+}
+
+.GpcCartActionsZone {
+  width: 75.59%;
+  clear: both;
+  margin-top: 12px;
+  margin-top: 0.75rem;
+}
+
+.GpcCartProceedToCheckoutButton {
+  float: right;
+}
+
+.PaymentButtonZone .GpcCartPriceDetails {
+  display: none;
+}
+
+.RadioButtonSectionTitleClass {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+  .RadioButtonSectionTitleClass label {
+    display: block;
+    padding: 8px;
+    padding: 0.5rem;
+  }
+
+.PaypalPaymentInformationsClass .RadioButtonSectionTitleClass {
+  border-top: none;
+}
+
+.CreditCardInformationsClass, .PaypalInformationsSection {
+  padding: 16px;
+  padding: 1rem;
+  background: #eeeeee;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+  .PaypalInformationsSection p {
+    margin-top: 0;
+  }
+
+  .CreditCardInformationsClass .ShippingFormLabel {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+.PaymentInformationsExpirationDateZone {
+  display: inline-block;
+  width: 47.5%;
+  margin-right: 5%;
+}
+
+.PaymentInformationsCVVZone {
+  display: inline-block;
+  width: 47.5%;
+}
+
+  .PaymentInformationsExpirationDateZone .ShippingFormLabel, .PaymentInformationsCVVZone .ShippingFormLabel {
+    width: 100%;
+  }
+
+/* CSS pour le Panier et le Résumé */
+.EmbededPayment.GpcCartDetailZone {
+  width: 75.59%;
+  float: left;
+}
+
+.EmbededPayment .GpcCartPriceDetails {
+  width: 22.03%;
+  float: right;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 1%;
+  margin: 0;
+  right: 0;
+}
+
+  .EmbededPayment .GpcCartPriceDetails table {
+    width: 100%;
+  }
+
+.EmbededPayment .GpcCartPriceDetailsTotal {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+  .EmbededPayment .GpcCartPriceDetailsTotal td {
+    padding-top: 2px;
+  }
+
+@media screen and (max-width: 836px) {
+  .GpcShippingInformationsZone .ShippingInformationsSection, .GpcShippingInformationsZone .ContactInformationsSection, .GpcPaymentInformationsZone .BillingInformationsSection, .GpcPaymentInformationsZone .PaymentInformationsSection {
+    width: 100%;
+    float: none;
+  }
+
+  .GpcShippingInformationsZone, .GpcPaymentInformationsZone, .GpcCartActionsZone {
+    width: 68%;
+  }
+
+  /* CSS pour le Panier et le Résumé */
+  .EmbededPayment.GpcCartDetailZone {
+    width: 68%;
+  }
+
+  .EmbededPayment .GpcCartPriceDetails {
+    width: 27%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .GpcShippingInformationsZone, .GpcPaymentInformationsZone, .GpcCartActionsZone {
+    width: 100%;
+  }
+
+    .GpcShippingInformationsZone .ShippingFormLabel, .GpcPaymentInformationsZone .ShippingFormLabel, .GpcShippingInformationsZone .ShippingFormInput, .GpcPaymentInformationsZone .ShippingFormInput, .GpcShippingInformationsZone .ShippingInformationsShippingLabel {
+      width: 100%;
+      margin-right: 0;
+    }
+
+  .ShippingSelectionSection {
+    padding-top: 1rem;
+  }
+
+  .GpcCartActionsZone, .GpcShippingInformationsZone .ShippingInformationsNextStepSection {
+    text-align: center;
+  }
+
+  .GpcCartProceedToCheckoutButton {
+    float: none;
+  }
+
+  .PaymentInformationsCreditCardZone .PaymentInformationsCreditCardInputZone {
+    width: 100%;
+  }
+
+  .PaymentInformationsExpirationDateZone .PaymentInformationsExpirationDateInputZone {
+    width: 100%;
+  }
+
+  .PaymentInformationsCVVZone .PaymentInformationsCVVInputZone {
+    width: 100%;
+  }
+
+  .GpcPaymentInformationsZone .PaymentButtonZone {
+    text-align: center;
+  }
+
+    .GpcPaymentInformationsZone .PaymentButtonZone .PaymentButtonLabel {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+  .PaymentButtonZone .GpcCartPriceDetails {
+    display: block;
+  }
+
+  /* CSS pour le Panier et le Résumé */
+  .EmbededPayment.GpcCartDetailZone {
+    width: 100%;
+  }
+
+  .EmbededPayment .GpcCartPriceDetails {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
