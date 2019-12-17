@@ -12,21 +12,582 @@
   <link rel="stylesheet" href="css/defaultGpc.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="shortcut icon" href="images/favicon.ico" />
+  <!--<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&amp;skin=desert"></script>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" integrity="sha256-4xzi3YxNlqjrtSTUiSM+LSOfJoteCfbhpUnm1WDHvxk=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="js/functions.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <script defer>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
   <form>
-    <div class="wrapAll home">
-			<div include="includes/header.html"></div>
+    <div class="wrapAll">
       <div class="wrapContent">
-        <div class="wrapper">
+        <section>
+          <div class="wrapper">
+            <div class="hero text">
+              <h1>Salut</h1>
+              <p>Voici un site web comportant plusieurs petits trucs que j'ai appris lors de mes temps morts.</p>
+              <p><strong>Ainsi que des trucs de pros!</strong></p>
+            </div>
+          </div>
+        </section>
 
-        </div>
+        <section>
+          <div class="wrapper">
+            <div class="content text">
+              <h2>Le :first-letter et compagnie</h2>
+              <p>Le <strong>:first-letter</strong> sert à styliser la première lettre d'un élément, duh.</p>
+              <p>Le <strong>:first-line</strong> sert à styliser la première ligne d'un élément, duh.</p>
+              <h4>Selon ce code: </h4>
+              <pre>
+                <code>
+p:first-line {
+  color: blue;
+}
+
+p:first-letter {
+  font-size: 3rem;
+  float: left;
+  line-height: 2rem;
+  margin-right: 0.25rem;
+  color: red;
+}</code>
+              </pre>
+
+              <h4>Nous obtenons ceci: </h4>
+
+              <div class="exemple exemple1">
+                  <p>Rob Brind'amour est un joueur de hockey exceptionnel. Ayant joué pour les Hurricanes de la caroline, il est malheureusement détesté par Olivier. Pourtant, il s'agit d'un excellent joueur doté d'un coeur extraordinaire. Rob Brind'amour est un joueur de hockey exceptionnel. Ayant joué pour les Hurricanes de la caroline, il est malheureusement détesté par Olivier. Pourtant, il s'agit d'un excellent joueur doté d'un coeur extraordinaire. Rob Brind'amour est un joueur de hockey exceptionnel. Ayant joué pour les Hurricanes de la caroline, il est malheureusement détesté par Olivier. Pourtant, il s'agit d'un excellent joueur doté d'un coeur extraordinaire.</p>
+                  <style lang="text/css">
+                    .exemple1 p:first-line{
+                      color:blue;
+                    }
+    
+                    .exemple1 p:first-letter{
+                      font-size: 3rem;
+                      float: left;
+                      line-height: 2rem;
+                      margin-right: 0.25rem;
+                      color: red;
+                    }
+                  </style>
+                </div>
+                <div class="sources">
+                  <h3>sources :</h3>
+                  <a target="_blank" href="https://codepen.io/lo-c-gamache/pen/ExaNXgo">https://codepen.io/lo-c-gamache/pen/ExaNXgo</a>
+                </div>
+            </div>
+
+            
+          </div>
+        </section>
+
+        <section>
+          <div class="wrapper">
+            <div class="content text">
+              <h2>Comment bien travailler avec les animations CSS</h2>
+              <p>Tu peux avoir accès à un menu dans chrome qui te permet de jouer avec les animations pour atteindre exactement ce que tu veux simplement en ouvrant le panneau animations.</p>
+              <img src="images/animations-panel-capture.PNG" alt="">
+              <h4>Vas-y, essaie!</h4>
+
+              <div class="exemple exemple2">
+                  <div class="wrapper">
+                      <div class="bouncing_ball">
+                      <div class="ball"></div>
+                      </div>
+                      <div class="spinner">
+                      <div class="curve_top_left"></div>
+                      <div class="curve_bottom_right"></div>
+                      <div class="curve_top_right"></div>
+                      <div class="curve_bottom_left"></div>
+                      <div class="center_circle"></div>
+                      </div>
+                      <h1 class="loading">LOADING<span class="dot_one"> .</span><span class="dot_two"> .</span><span class="dot_three"> .</span></h1>
+                      </div>
+                <style lang="text/css">
+                  
+  * {
+  box-sizing: border-box;
+}
+.exemple2 {
+  font-family: Palanquin;
+  line-height: 1.618em;
+  background: #3498db;
+  color: #fff;
+}
+.exemple2 h1.loading {
+  font-size: 3em;
+  font-weight: 400;
+  margin-left: 3rem;
+}
+.exemple2 span[class^='dot_'] {
+  opacity: 0;
+}
+.exemple2 .dot_one {
+  -webkit-animation: dot_one 2s infinite linear;
+          animation: dot_one 2s infinite linear;
+}
+.exemple2 .dot_two {
+  -webkit-animation: dot_two 2s infinite linear;
+          animation: dot_two 2s infinite linear;
+}
+.exemple2 .dot_three {
+  -webkit-animation: dot_three 2s infinite linear;
+          animation: dot_three 2s infinite linear;
+}
+.exemple2 .wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.exemple2 .bouncing_ball {
+  position: relative;
+  width: 4rem;
+  margin: 0 auto;
+  height: 12rem;
+}
+.exemple2 .ball {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+.exemple2 .spinner {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  margin: 6rem auto;
+}
+.exemple2 div[class^='curve_'] {
+  position: absolute;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-animation: spin 4s infinite;
+          animation: spin 4s infinite;
+}
+.exemple2 .curve_top_left {
+  width: 3rem;
+  height: 3rem;
+  border-top: 0.5rem solid #fff;
+  border-left: 0.5rem solid #fff;
+  border-top-left-radius: 200%;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.exemple2 .curve_bottom_right {
+  width: 3rem;
+  height: 3rem;
+  border-bottom: 0.5rem solid #fff;
+  border-right: 0.5rem solid #fff;
+  border-bottom-right-radius: 200%;
+  bottom: 0;
+  right: 0;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+.exemple2 .curve_top_right {
+  width: 2rem;
+  height: 2rem;
+  border-top: 0.5rem solid #fff;
+  border-right: 0.5rem solid #fff;
+  border-top-right-radius: 200%;
+  top: 1rem;
+  right: 1rem;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+.exemple2 .curve_bottom_left {
+  width: 2rem;
+  height: 2rem;
+  border-bottom: 0.5rem solid #fff;
+  border-left: 0.5rem solid #fff;
+  border-bottom-left-radius: 200%;
+  bottom: 1rem;
+  left: 1rem;
+  -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+}
+.exemple2 .center_circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.25rem;
+  left: 2.25rem;
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+@-webkit-keyframes dot_one {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dot_one {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes dot_two {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dot_two {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes dot_three {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dot_three {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  34% {
+    height: 4rem;
+    width: 4rem;
+  }
+  35% {
+    top: 8rem;
+    height: 3rem;
+    width: 4.3rem;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  45% {
+    height: 4rem;
+    width: 4rem;
+  }
+  90% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  34% {
+    height: 4rem;
+    width: 4rem;
+  }
+  35% {
+    top: 8rem;
+    height: 3rem;
+    width: 4.3rem;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  45% {
+    height: 4rem;
+    width: 4rem;
+  }
+  90% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: rotate(675deg);
+            transform: rotate(675deg);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    -webkit-transform: rotate(675deg);
+            transform: rotate(675deg);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}</style>
+              </div>
+
+              <div class="sources">
+                <h3>sources :</h3>
+                <a target="_blank" href="https://codepen.io/tutsplus/full/NqxYLJ/">https://codepen.io/tutsplus/full/NqxYLJ/</a>
+                <a target="_blank" href="https://webdesign.tutsplus.com/articles/quick-tip-chrome-animation-dev-tools--cms-31505">https://webdesign.tutsplus.com/articles/quick-tip-chrome-animation-dev-tools--cms-31505</a>
+                <a target="_blank" href="https://codepen.io/enbee81/pen/LBMKqV">https://codepen.io/enbee81/pen/LBMKqV</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrapper">
+            <div class="content">
+              <h1>Des menu déroulants accessibles, c'est <span class="nope">crissement</span> facile,<br> n'est-ce pas Sam?</h1>
+              <p>T'as juste besoin de dupliquer ton sélecteur hover et de remplacer <strong>:hover</strong> par <strong>:focus-within</strong>. Aussi facile que ça.</p>
+
+              <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="una" data-slug-hash="RMmogp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple CSS Dropdown Menu with Hover and :focus-within and Focus states">
+                  <span>See the Pen <a href="https://codepen.io/una/pen/RMmogp">
+                  Simple CSS Dropdown Menu with Hover and :focus-within and Focus states</a> by Una Kravets (<a href="https://codepen.io/una">@una</a>)
+                  on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrapper">
+            <div class="content">
+              <h2>HSL, ça devrait être un must asteur.</h2>
+              <p>Après discussion avec Max, on est arrivé à la conclusion que le format de couleur HSL est supérieur aux autres.</p>
+              <p>En gros, voici les principaux points positifs qui sont sortis:</p>
+              <ul>
+                <li>On peut faire une règle pour toutes les couleurs de hover</li>
+              </ul>
+              <p>C'est à peu près ça, mais c'est déjà un de plus que les autres formats!</p>
+              <p>Voici un article qui en parle plus: <a href="https://www.sarasoueidan.com/blog/hex-rgb-to-hsl/#hsl-and-color-harmonies">https://www.sarasoueidan.com/blog/hex-rgb-to-hsl/#hsl-and-color-harmonies</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrapper">
+            <div class="content">
+              <h2>Le CSS modulaire, la meilleure façon d'écrire un shitload de css et se retrouver.</h2>
+              <p>Je suis certain qu'on est tous perdus quand on travaille dans le site de quelqu'un d'autre, même si on travaille tous globalement de la même façon. Alors je vais vous proposer quelque chose qui selon moi, sera bien pour tout le monde!</p>
+              <h3>Kossé qu'on fait?</h3>
+              <p>En gros, j'aimerais qu'on essaie un mix entre le <strong><a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a></strong>, <strong><a href="https://en.bem.info/methodology/">BEM</a></strong> et <strong>SMACSS</strong>. Inquiète-toi pas, je vais tout t'expliquer ça!</p>
+              <h3>OOCSS (Object-Oriented CSS)</h3>
+              <p>On l'utilise pas mal déjà. La clé est simple: au lieu de dire que tous les boutons de ma bannière sont bleus, on va faire un bouton et ajouter une class qui rend le bouton bleu.</p>
+              <h4>Exemple: </h4>
+              <p>Au lieu de :</p>
+              <pre>
+                  <code>
+.banner button{
+  background: blue;
+  padding: 1rem 2rem;
+}</code>
+              </pre>
+            <p>Fais :</p>
+            <pre>
+                <code>
+button{
+  padding: 1rem 2rem;
+}
+
+.blue{
+  background: blue;
+}</code>
+                </pre>
+                <h3>BEM</h3>
+                <p>Je vous en ai déjà parlé mais on l'a jamais essayé (Oli oui mais dans vue.js et c'est inutile car tout est déjà modulaire). Yé temps que ça change!</p>
+                <p>Dans le fond, <strong>BEM</strong> c'est seulement un façon de nommer nos classes en suivant le <strong>OOCSS</strong>. T'as 3 éléments avec BEM: un block, un élément et un modifieur.</p>
+                <div class="exemple exemple3" style="padding: 5rem;">
+                  <img src="images/bem-card-1.jpg" alt="">
+                </div>
+                <h4>Le block</h4>
+                <p>C'est l'élément mère de l'élément. Dans notre exemple, c'est <strong>.personCard</strong>. Normalement, il est écris en kebab-case mais moi je l'ai mis en camelCase parce qu'on l'utilise déjà partout ailleurs.</p>
+                <h4>L'élément</h4>
+                <p>C'est tout ce qui est dans le block et qui doit rester dans le block. Dans notre exemple, <strong>.personCard_text</strong> et <strong>.personCard_Name</strong> sont des éléments. Un élément contient le block suivi du nom de l'élément, séparé par un <strong>_</strong>. L'élément s'écrit aussi en camelCase.</p>
+                <h4>Le modifieur</h4>
+                <p>Le modifieur sert à modifier notre block. Dans notre exemple, il s'agit de <strong>.personCard-blue</strong>. Le modifieur contient le block suivi du nom du modifieur, séparé par un <strong>-</strong>. Le modifieur ne sert qu'à modifier le style d'un block.</p>
+                <h3>SMACSS</h3>
+                <p>SMACSS sert à catégoriser nos classes-objets. Il existe 5 catégories, mais seulement 4 sont utiles.</p>
+                <h4>1. Base</h4>
+                <p>La base est le style général du site web. ce sont les h1, p, ul, wrapper, etc.</p>
+                <h4>2. Layout</h4>
+                <p>Le layout c'est le style qui place les éléments. Un css de layout ne doit pas avoir de style, uniquement de la position.</p>
+                <h4>3. Modules</h4>
+                <p>Les modules sont les styles qui sont appliqués pour un block (notre exemple BEM). Ça devrait être la partie la plus longue du CSS.</p>
+                <h4>4. State</h4>
+                <p>Le state (Ou l'état), sont les classes utiles pour le javascript. par exemple, nous aurions une classe <strong>open</strong> pour les sous-menus ouverts.</p>
+                <h4>Conventions de nom</h4>
+                <p>SMACSS possède une règle pour certaines catégories: </p>
+                <ul>
+                  <li><strong>l-</strong> précède les règles de layout.</li>
+                  <li><strong>m-</strong> précède les règles de modules.</li>
+                  <li><strong>is-</strong> précède les règles de state.</li>
+                </ul>
+                <h3>Exemple avec tous ces concepts ensemble</h3>
+                <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="html,result" data-user="lo-c-gamache" data-slug-hash="wvBoVGg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Modular CSS exemple">
+                    <span>See the Pen <a href="https://codepen.io/lo-c-gamache/pen/wvBoVGg">
+                    Modular CSS exemple</a> by Loïc Gamache (<a href="https://codepen.io/lo-c-gamache">@lo-c-gamache</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                </p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h3>Trucs</h3>
+                <p>Lorsque vous éditerez un site qui possède ce système, les seules choses que vous pourrez modifier seront la base et les modules. les states et les layouts seront probablement utilisés par d'autres parties. vous devrez donc créer un autre state ou layout, ou bien ajouter un midifieur au layout.</p>
+                <h3>Conclusion</h3>
+                <p>Avec ce nouveau template, nous pouvons déterminer en un coup d'oeuil ce que la classe veut dire et quels style y seront ajoutés. De plus, lorsque sera venu le temps de modifier le CSS, nous nous retrouverons beaucoup plus rapidement et nous pourront savoir ce que le css impacte réellement. De plus, tout ce concept n'est pas complètement différent de ce que nous faisons déjà.</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="wrapper">
+            <div class="content">
+              <h2>Local storage et session storage</h2>
+              <p>Le local storage est vraiment simple et permet de sauvegarder différente données utiles. plus de raison de copier le code de cookie d'un vieux site désuet.</p>
+              <p>La seule différence entre le local storage et le session storage c'est que le session storage se supprime lorsque tu ferme ton browser. Sinon, le local storage reste jusqu'à ce que tu supprime la cache du browser.</p>
+              <p>Pour créer un local storage :</p>
+              <pre>
+                  <code>
+window.localStorage.setItem('storageName', "storageValue");</code>
+              </pre>
+              <p>Et pour récupérer la valeur: </p>
+              <pre>
+                  <code>
+window.localStorage.getItem('storageName');</code>
+              </pre>
+              <p>Pour faire un session storage, tu fais juste changer <strong>local</strong> pour <strong>session</strong>!</p>
+              <p>Le storage sauvegarde un <strong>string</strong> alors si tu veux sauvegarder un <strong>objet</strong>, il est important de le transformer en string avec <strong>JSON</strong> (Statham).<p>
+              <p>exemple :</p>
+              <pre>
+                  <code>
+var objectName = {
+  name: "John",
+  lastName: "Doe"
+}  
+
+// Set le storage
+window.localStorage.setItem('storageName', JSON.stringify(objectName));
+
+// Récupérer le storage
+objectName = JSON.parse(window.localStorage.getItem('storageName'));
+</code>
+              </pre>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-		<div include="includes/footer.html"></div>
-		<div include="includes/menuMobile.html"></div>
   </form>
 	<script type="text/javascript" src="js/include.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
