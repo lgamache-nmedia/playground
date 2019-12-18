@@ -11,8 +11,10 @@ for (var i = 0; i < anchors.length; i++) {
   ul.appendChild(li);
 }
 
+checkPosition();
+
 // Watch le scroll pour highlight le bon lien
-window.addEventListener("scroll", throttle(checkPosition, 500));
+window.addEventListener("scroll", throttle(checkPosition, 100));
 
 function throttle(fn, wait) {
   var time = Date.now();
@@ -58,3 +60,13 @@ function offset(el) {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   return rect.top + scrollTop;
 }
+
+// escape tous les html dans une balise code
+document.querySelectorAll("code").forEach(function(element) {
+  element.innerHTML = element.innerHTML
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+});
