@@ -1,53 +1,60 @@
-//Ouvrir un popup en mobile
-$(".openPopin").click(function () {
-  if ($(window).width() < 768) {
-    $(window).scrollTop(0);
+// Ajout des anchors au menu!
+var anchors = document.getElementsByClassName("anchor");
+for (var i = 0; i < anchors.length; i++) {
+  var anchor = anchors[i];
+  var ul = document.querySelector(".menuContainer .menu");
+  var li = document.createElement("li");
+  var a = document.createElement("a");
+  a.appendChild(document.createTextNode(anchor.textContent));
+  a.href = "#" + anchor.id;
+  li.appendChild(a);
+  ul.appendChild(li);
+}
+
+// Watch le scroll pour highlight le bon lien
+window.addEventListener("scroll", throttle(checkPosition, 500));
+
+function throttle(fn, wait) {
+  var time = Date.now();
+  return function() {
+    if (time + wait - Date.now() < 0) {
+      fn();
+      time = Date.now();
+    }
+  };
+}
+
+function checkPosition() {
+  var vh = window.innerHeight;
+  var sh = window.pageYOffset;
+  var elems = document.querySelectorAll(".menuContainer .menu a");
+
+  var higlightedElem = null;
+  for (var j = 0; j < anchors.length; j++) {
+    if (anchors[j].offsetTop < sh + vh / 1.75) {
+      higlightedElem = anchors[j];
+    } else {
+      break;
+    }
   }
-});
 
-setImgInBg();
-$(".defaultFacet").bind("templatingCompleted", function () {
-	setImgInBg();
-});
+  for (var l = 0; l < elems.length; l++) {
+    elems[l].classList.remove("selected");
+  }
 
-//Ajout de classe pour notre beau IE
-if (navigator.userAgent.indexOf("Trident") > -1) {
-  $("html").addClass("IE11");
+  if (higlightedElem !== null) {
+    var elemText = higlightedElem.textContent;
+
+    for (var k = 0; k < elems.length; k++) {
+      if (elems[k].textContent === elemText) {
+        elems[k].classList.add("selected");
+      }
+    }
+  }
 }
 
-if (navigator.userAgent.indexOf("Edge") > -1) {
-  $("html").addClass("IEedge");
+function offset(el) {
+  var rect = el.getBoundingClientRect(),
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return rect.top + scrollTop;
 }
-
-//Faire afficher le menu mobile
-$(".toggleMenuMobile").click(function(){
-  $(this).toggleClass("selected");
-  $(".menuMobile").slideToggle();
-});
-
-//Fonctionnement en toggle du menu principal mobile
-$(".menuMobile").find("li.parent").each(function () {
-  //Enleve un paquet d'evenements qu'on a plus besoin, enleve le href sur le lien, et change quelques css
-  $(this).removeAttr("onkeydown").removeAttr("onkeypress").removeAttr("expansionmode").find(">a").removeAttr("href").next().hide();
-  $(this).find("*").css("visibility", "visible");
-  $(this).parents("ul.MenuBar").removeClass("MenuBar");
-
-  //A chaque click sur sur les liens d'un li parent, ferme les sous-menus puis ouvre celui qu'on veut
-  $(this).find(">a").click(function () {
-    if ($(this).next().css("display") === "block") {
-      $(this).closest("ul").find("div").slideUp(500, function () {
-				$(window).scrollTop(0);
-      });
-      $(this).parent().removeClass("open");
-    }
-    else {
-      var currentElement = $(this);
-      currentElement.closest("ul").find("li").removeClass("open").find("div").slideUp();
-			currentElement.next().slideDown(500, function () {
-				$(window).scrollTop(currentElement.offset().top);
-      });
-      currentElement.parents("ul").find("a").removeClass("open");
-      currentElement.parent().addClass("open");
-    }
-  })
-});
