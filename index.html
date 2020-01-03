@@ -739,9 +739,27 @@ body {
         </section>
         <a id="pieChart" class="anchor">Css pie charts</a>
         <section>
-          <h2>Comment faire des graphiques en pointe de tarte</h2>
-          <p>Normalement c'est assez simple, sauf quand faut que ça marche sur tous les navigateurs.</p>
-          
+          <div class="wrapper">
+            <h2>Comment faire des graphiques en pointe de tarte</h2>
+            <p>Tu dois juste importer ces deux scripts. Je te conseille de les télécharger et de les servir localement</p>
+            <p><a href="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js</a></p>
+            <p><a href="https://leaverou.github.io/conic-gradient/conic-gradient.js">https://leaverou.github.io/conic-gradient/conic-gradient.js</a></p>
+            <p>Ensuite, il ne reste qu'à utiliser les conic-gradients comme dans le codepen suivant : </p>
+            <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="html,result" data-user="lo-c-gamache" data-slug-hash="vYEWReO" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pie charts">
+              <span>See the Pen <a href="https://codepen.io/lo-c-gamache/pen/vYEWReO">
+              Pie charts</a> by Loïc Gamache (<a href="https://codepen.io/lo-c-gamache">@lo-c-gamache</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+            <p>Là tu vas me dire : "c'est quoi que ça veut dire tous ces chiffres là!". Le premier c'est la force de transition. à 0, pas de transition, c'est net, frette et sec. Pour un graphique, tu laisse ça à 0. Si tu veux faire autre chose qu'un graphique, amuse-toi! Le deuxième, c'est le pourcentage du rond que tu remplis.</p>
+            <p>Attention! les pourcentages ne s'additionnes pas automatiquement. Si tu as deux valeurs à 10%, les pointes seront un par dessus l'autre. Pour atteindre le résultat désiré, il faudra avoir la première pointe à 10%, la deuxième à 20%, etc. La deuxième pointe sera donc en dessous de la prmière, mais elle dépassera de 10%.</p>
+            <p>Il est également possible d'utiliser seulement l'api et créer le gradient à partir du javascript. Vous pouvez vous référer à la source pour plus d'infos.</p>
+            <div class="sources">
+              <h3>source :</h3>
+              <a target="_blank" href="https://leaverou.github.io/conic-gradient/">https://leaverou.github.io/conic-gradient/</a>
+            </div>
+          </div>
         </section>
       </div>
     </div>
