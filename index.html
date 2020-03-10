@@ -789,6 +789,93 @@ body {
             <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
           </div>
         </section>
+
+        <a id="staticEmail" class="anchor">Courriel à partir d'un site statique</a>
+        <section>
+          <div class="wrapper">
+            <h2>Voici comment faire un envoi de courriel de formulaire à partir d'un site statique en utilisant les Google sheets.</h2>
+            <p>On le sait, il existe des API comme Sendgrid qui peuvent faire la job, mais si on veut pas utiliser ça? J'ai la solution pour toi! Suit ce guide, et tout va bien aller.</p>
+            <p>Dans le fond, ce qu'on va faire c'est envoyer nos infos de formulaire à un script hébergé sur Google drive, puis ce script va envoyer un courriel et feeder la Google sheet.</p>
+            <h3>Étape 1</h3>
+            <p>Copie <a target="_blank" href="https://docs.google.com/spreadsheets/u/1/d/1qvKQQhfiktJJUecuoAel-0bq3yxMYz8dsVA5fjgNX6I/copy">ce fichier</a> et renomme-le comme tu veux.</p>
+            <h3>Étape 2</h3>
+            <p>Change les valeurs de la première ligne en correspondance avec les attributs "name" de tes inputs, mais garde le champ "Timestamp". (Tu peux en ajouter/retirer comme tu veux)</p>
+            
+            <div class="exemple">
+              <img src="images/mailSender-values.png" alt="">
+            </div>
+            
+            <pre>
+              <code>
+<input type="text" name="name" placeholder="Name">
+<input type="tel" name="phone" placeholder="Phone">
+<input type="email" name="email" placeholder="Email"></code>
+            </pre>
+
+            <h3>Étape 3</h3>
+            <p>Va dans l'éditeur de script, enlève le commentaire à la ligne 8 et change le courriel pour le destinataire du formulaire ( Ex.: info@exemple.com). Pour les tests, tu peux mettre ton adresse courriel, car tu peux changer la valeur quand tu veux.</p>
+
+            <div class="exemple">
+              <img src="images/mailSender-script-editor.png" alt="">
+            </div>
+
+            <div class="exemple">
+              <img src="images/mailSender-receiver.PNG" alt="">
+            </div>
+
+            <h3>Étape 4</h3>
+            <p>Il te faudra publier ton script et ce, chaque fois que tu fais une modification. Pour ce faire, enregistre le script puis gère sa version dans "Fichier > Gérer les versions"</p>
+
+            <div class="exemple">
+              <img src="images/mailSender-save-script.PNG" alt="">
+            </div>
+
+            <p>Ajoute une description du changement apporté, et fais "Save new version". Tu devra faire ça chaque fois que tu change le script.</p>
+
+            <div class="exemple">
+              <img src="images/mailSender-version-manager.PNG" alt="">
+            </div>
+
+            <p>Ensuite, il faut publier. Appuie sur "Publier" puis "Déployer en tant qu'application Web...".</p>
+
+            <div class="exemple">
+              <img src="images/mailSender-publish.PNG" alt="">
+            </div>
+
+            <p>Ensuite, sélectionne la version que tu veux déployer. Pour le premier déploiement, sélectionne la version 1, pour le reste, prends une version créée précédemment ou fais juste "nouveau". Soit certain que n'importe qui puisse accéder à l'application, puis copie l'url du script et appuie sur "Mettre à jour".</p>
+
+            <div class="exemple">
+              <img src="images/mailSender-publish-screen.PNG" alt="">
+            </div>
+
+            <p>Google va demander des authorisations, fais juste accepter.</p>
+
+            <h3>Étape 5</h3>
+            <p>Copie le Javascript du codepen ci-dessous. Tu devra changer quelques sélecteurs, mais rien de trop&nbsp;difficile!</p>
+            <p>Sur ton formulaire, ajoute aussi l'attribut <strong>method="POST"</strong> et l'attribut <strong>action="TON&nbsp;URL&nbsp;DE&nbsp;SCRIPT"</strong> en y collant ton url de script.</p>
+
+            <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="js,result" data-user="lo-c-gamache" data-slug-hash="QWbaopx" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Send email through Google sheets">
+              <span>See the Pen <a href="https://codepen.io/lo-c-gamache/pen/QWbaopx">
+              Send email through Google sheets</a> by Loïc Gamache (<a href="https://codepen.io/lo-c-gamache">@lo-c-gamache</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+            <h3>Tada!</h3>
+            <p>Le google sheet envoie un courriel et sauvegarde les données dans le document! <a target="_blank" href="https://docs.google.com/spreadsheets/d/1qvKQQhfiktJJUecuoAel-0bq3yxMYz8dsVA5fjgNX6I/edit#gid=0">Clique ici pour voir le document de test.</a></p>
+
+            <div class="exemple">
+              <img src="images/mailSender-test.PNG" alt="">
+            </div>
+
+            <p>Et voici un preview du courriel reçu : </p>
+
+            <div class="exemple">
+              <img src="images/mailSender-mail-preview.PNG" alt="">
+            </div>
+
+          </div>
+        </section>
       </div>
     </div>
   </form>
