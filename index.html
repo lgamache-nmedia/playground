@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -874,6 +874,39 @@ body {
               <img src="images/mailSender-mail-preview.PNG" alt="">
             </div>
 
+          </div>
+        </section>
+
+        <a id="variableButtonWidth" class="anchor">Largeur de boutons inégaux</a>
+        <section>
+          <div class="wrapper">
+            <h2>Voici comment avoir une largeur variable avec flex</h2>
+            <p>Ça t'es surement déjà arrivé de vouloir des boutons qui grossissent en fonction de l'espace disponible dans le container n'est-ce pas? T'as surement essayé un width en pourcentage en te rendant compte que t'as un bouton plus long que les autres pi que le pourcentage en théorie c'est bien, mais ça donne pas un bon résultat. Ben panique pas, fait juste mettre un <strong>flex-grow: 1;</strong> et le tour est joué! Voici un exemple :</p>
+
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="lo-c-gamache" data-slug-hash="yLeRKWd" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flex grow et boutons inégaux">
+              <span>See the Pen <a href="https://codepen.io/lo-c-gamache/pen/yLeRKWd">
+              Flex grow et boutons inégaux</a> by Loïc Gamache (<a href="https://codepen.io/lo-c-gamache">@lo-c-gamache</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </section>
+
+        <a id="easyClickOutside" class="anchor">Click outside très facile!</a>
+        <section>
+          <div class="wrapper">
+            <h2>Voici comment faire un click outside facilement</h2>
+            <p>T'auras pas besoin de voir si ton click est sur élément quelquonque ou bien de créer un div qui englobe tout.</p>
+            <p>Nenon, tout ce que t'as à faire c'est de mettre en focus ton élément parent et d'écouter le focusout. Facile en javascript à la vanille comme en jQuery!</p>
+            
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="lo-c-gamache" data-slug-hash="XWXxqRj" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Very simple click outside">
+              <span>See the Pen <a href="https://codepen.io/lo-c-gamache/pen/XWXxqRj">
+              Very simple click outside</a> by Loïc Gamache (<a href="https://codepen.io/lo-c-gamache">@lo-c-gamache</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+            <p><strong>Attention!</strong> Assure toi d'avoir mis la propriété <strong>tabindex="-1"</strong> sur ton élément HTML sinon ton élément ne sera pas "focusable" avec le javascript. Tu peux aussi mettre la valeur à 0 si tu veux que ton élément soit accessible avec une tabulation.</p>
           </div>
         </section>
       </div>
